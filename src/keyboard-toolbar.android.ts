@@ -5,6 +5,7 @@ import { TabView } from "@nativescript/core/ui/tab-view";
 import { ToolbarBase } from "./keyboard-toolbar.common";
 import { Frame } from "@nativescript/core/ui/frame";
 import {
+  Application,
   Screen as screen,
   Utils
 } from '@nativescript/core';
@@ -253,7 +254,7 @@ export class Toolbar extends ToolbarBase {
     const SAMSUNG_NAVIGATION_EVENT = "navigationbar_hide_bar_enabled";
     try {
       // eventId is 1 in case the virtual navbar is hidden (but it shows when the keyboard opens)
-      Toolbar.supportVirtualKeyboardCheck = android.provider.Settings.Global.getInt(Utils.android.getApplication().foregroundActivity.getContentResolver(), SAMSUNG_NAVIGATION_EVENT) === 1;
+      Toolbar.supportVirtualKeyboardCheck = android.provider.Settings.Global.getInt(Application.android.foregroundActivity.getContentResolver(), SAMSUNG_NAVIGATION_EVENT) === 1;
     } catch (e) {
       // non-Samsung devices throw a 'SettingNotFoundException'
       console.log(">> e: " + e);
@@ -264,7 +265,7 @@ export class Toolbar extends ToolbarBase {
 
   private static getUsableScreenSizeY(): number {
     const screenSize = new android.graphics.Point();
-    Utils.android.getApplication().foregroundActivity.getWindowManager().getDefaultDisplay().getSize(screenSize);
+    Application.android.foregroundActivity.getWindowManager().getDefaultDisplay().getSize(screenSize);
     return screenSize.y;
   }
 }

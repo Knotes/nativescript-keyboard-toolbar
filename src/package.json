@@ -19,7 +19,7 @@
     "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
     "plugin.tscwatch": "npm run tsc -- -w",
     "demo.ios": "npm run tsc && cd ../demo && tns run ios",
-    "demo.android": "npm run tsc && cd ../demo && tns run android --force",
+    "demo.android": "npm run tsc && cd ../demo && tns run android",
     "demo-ng.ios": "npm run tsc && npm run package && cd ../demo-ng && tns run ios",
     "demo-ng.android": "npm run tsc && npm run package && cd ../demo-ng && tns run android",
     "demo-vue.ios": "npm run tsc && cd ../demo-vue && tns run ios --bundle",

@@ -1,8 +1,7 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { action } from "tns-core-modules/ui/dialogs";
-import { isIOS } from "tns-core-modules/platform";
-import { Page } from "tns-core-modules/ui/page";
-import { TextView } from "tns-core-modules/ui/text-view";
+import { Observable, isIOS } from "@nativescript/core";
+import { action } from "@nativescript/core/ui/dialogs";
+import { Page } from "@nativescript/core/ui/page";
+import { TextView } from "@nativescript/core/ui/text-view";
 
 const emailValidator = require("email-validator");
 
