@@ -1,8 +1,9 @@
-import { ContentView, View } from "tns-core-modules/ui/content-view";
-import { Property } from "tns-core-modules/ui/core/properties";
-import { AddChildFromBuilder } from "tns-core-modules/ui/core/view";
-import { booleanConverter } from "tns-core-modules/ui/core/view-base";
-import { VerticalAlignment } from "tns-core-modules/ui/styling/style-properties";
+import { ContentView } from "@nativescript/core/ui/content-view";
+import { View } from "@nativescript/core/ui/core/view";
+import { Property } from "@nativescript/core/ui/core/properties";
+import { AddChildFromBuilder } from "@nativescript/core/ui/core/view";
+import { booleanConverter } from "@nativescript/core/ui/core/view-base";
+import { VerticalAlignment } from "@nativescript/core/ui/styling/style-properties";
 
 export const forIdProperty = new Property<ToolbarBase, string>({
   name: "forId"
